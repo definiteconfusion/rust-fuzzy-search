@@ -22,9 +22,9 @@ fn fuzzy_search<'a>(query: &'a str, choices: &'a [&'a str], max_distance: usize)
 }
 fn main() {
     let args: Vec<String> = env::args().collect();
-    let choices = args[3..].iter().map(|s| s.as_str()).collect::<Vec<_>>();
-    let query = args[2].as_str();
-    let max_distance = args[1].parse().unwrap();
+    let choices = args[2..].iter().map(|s| s.as_str()).collect::<Vec<_>>();
+    let query = args[1].as_str();
+    let max_distance = 2;
     let results = fuzzy_search(query, &choices, max_distance);
     for result in results {
         println!("{}", result);
