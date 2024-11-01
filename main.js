@@ -31,4 +31,4 @@ const levenshteinDistance = (a, b) => {
     return results;
   };
 
-export default fuzzySearch;
+export { fuzzySearch };
